@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RandomiserGenerator"
         mc:Ignorable="d"
         Title="RansomLetterGenerator" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="5px">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -17,8 +17,10 @@
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Grid.Column="0">Defualt Text</Label>
         <Label Grid.Row="0" Grid.Column="1">Ransom Text</Label>
-        <TextBox Name="Input" Grid.Row="1" Grid.Column="0" TextChanged="Input_TextChanged"/>
-        <TextBox Name="Outpt" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Name="Input" Grid.Row="1" Grid.Column="0" TextChanged="Input_TextChanged" AcceptsReturn="True" TextWrapping="WrapWithOverflow" ScrollViewer.CanContentScroll="True"/>
+       <!--<TextBox Name="Outpt" Grid.Row="1" Grid.Column="1"/>-->
+        <!--<DataGrid Grid.Row="1" Grid.Column="1" Name="Outpt"/>-->
+        <WrapPanel Grid.Row="1" Grid.Column="1" Name="Outpt" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
